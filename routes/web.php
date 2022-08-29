@@ -1,3 +1,5 @@
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -18,4 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/port', function () {
+    return view('port');
+});
+
 Route::get('/ships', [ShipController::class, 'index']);
+
+Route::get('/ports', [ PortController::class, 'port']);
